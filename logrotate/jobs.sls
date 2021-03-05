@@ -3,7 +3,7 @@
 {% set jobs = salt['pillar.get']('logrotate:jobs', {}) %}
 
 include:
-  - logrotate
+  - logrotate.install
 
 {% for key, value in jobs.items() %}
   {% set contents = value.get('contents', False) %}
